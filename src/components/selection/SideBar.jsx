@@ -14,6 +14,29 @@ export const ModeToggle = ({advancedMode}) => {
     return ('Show Advanced Details')
 }
 
+// https://www.w3schools.com/w3css/w3css_tabulators.asp
+function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+const TabLayout = () => {
+    return (
+        <div className='tabBar'>
+            <button className='tab' onclick='openTab(event, "info")' >Info</button>
+            <button className='tab' onclick='openTab(event, "features")' >Map Features</button>
+        </div>
+    )
+}
 
 const ShowSidebar = ({selectedFeature, selectedFeatureType, advancedMode}) => {
     // console.log('ShowSidebar/advancedMode', advancedMode)
@@ -62,6 +85,7 @@ const SideBar = ({selectedFeature, selectedFeatureType, zoom, zoomLimit, advance
     if(zoom < zoomLimit) {
         return (
         <div id='sidebar' className='sidebar'>
+            <TabLayout />
             <p>Zoom in to select a street segment and learn more about it</p>
         </div>
         )
@@ -69,12 +93,14 @@ const SideBar = ({selectedFeature, selectedFeatureType, zoom, zoomLimit, advance
     if(selectedFeature == undefined) {
         return (
         <div id='sidebar' className='sidebar'>
-            <p>Click a street segment to learn more about it</p>
+            <TabLayout />
+            <p>Select a feature or street segment to learn more about it</p>
         </div>
         )
     }
     return (
         <div id='sidebar' className='sidebar'>
+            <TabLayout />
             <ShowSidebar 
                 selectedFeature={selectedFeature}
                 selectedFeatureType={selectedFeatureType}

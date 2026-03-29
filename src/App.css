@@ -190,6 +190,21 @@ p, ul, ol {
   display: block;
 }
 
+.tabBar {
+  width:100%;
+  overflow:hidden;
+  display:inline-block;
+  width:auto;
+}
+.tab {
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none;
+  display:block;
+  outline:0;
+}
+
 .tableContainer {
   /* https://thelinuxcode.com/make-html-table-vertically-scrollable/ */
   max-width: 400px;
