@@ -62,7 +62,7 @@ const SideBar = ({selectedFeature, selectedFeatureType, zoom, zoomLimit, advance
     if(zoom < zoomLimit) {
         return (
         <div id='sidebar' className='sidebar'>
-            <p>Zoom in to select a street segment and learn more about it</p>
+            <p>Zoom in to select a street segment or other feature and learn more about it</p>
         </div>
         )
     }
