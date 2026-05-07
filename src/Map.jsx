@@ -24,8 +24,8 @@ const MAX_ZOOM = 20
 const MIN_ZOOM = 9
 const ZOOM_UNION = 12
 const BOUNDS = [
-  [-71.3000, 42.1500], // Southwest coordinates
-  [-70.9000, 42.5000]  // Northeast coordinates
+  [-71.7000, 42.0000], // Southwest coordinates
+  [-70.0000, 42.7000]  // Northeast coordinates
 ];
 const LINE_WIDTH = 4
 
@@ -458,7 +458,7 @@ function Map() {
   return (
     <>
       <div id='map-container' ref={mapContainerRef} >
-        {/* <div className="topbar">
+        {/*} <div className="topbar">
           Longitude: {center[0].toFixed(4)} | Latitude: {center[1].toFixed(4)} | Zoom: {zoom.toFixed(2)}
         </div> */}
 

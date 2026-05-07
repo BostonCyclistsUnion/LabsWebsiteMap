@@ -91,7 +91,7 @@ p, ul, ol {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 200px;
   margin: 12px;
   border-radius: 4px;
 }
