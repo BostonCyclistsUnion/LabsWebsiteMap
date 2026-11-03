@@ -208,7 +208,7 @@ export async function layerBikeParking (mapRef,
                                   setActiveFeature, setActiveFeatureType
                                 ) {
   // Overpass().then((bike_parking_json) => {
-  DownloadGeojson('https://raw.githubusercontent.com/BostonCyclistsUnion/osm-bikeparking/refs/heads/main/data.geojson').then((bike_parking_json) => {
+  DownloadGeojson('https://raw.githubusercontent.com/BostonCyclistsUnion/osm-bikeparking/refs/heads/main/data_bikeParking.geojson').then((bike_parking_json) => {
     console.log('bike_parking_json loaded')
     if (typeof mapRef.current.getSource('bike-parking') == 'undefined'){
       mapRef.current.addSource('bike-parking', {
